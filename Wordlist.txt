@@ -1,0 +1,6 @@
+sitemap.xml
+robots.txt
+another test
+test
+João
+Amadeu
