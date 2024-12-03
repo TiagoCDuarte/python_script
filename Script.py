@@ -36,6 +36,16 @@ def dir_finder():
             #if response.status_code == 200:
             print(testurl+str(response))
 
+def dir_finder2(): 
+    url = input("What is the target URL? (Please also add the http or https):") 
+    with open("names.txt", 'r') as file: 
+        for name in file:
+            name = name.strip()
+            testurl = url + "/" + name
+            response = requests.get(testurl)
+            if response.status_code == 200:
+                print(testurl+str(response))
+
 
 def menu():
     option1 = "1-Read and display names"
@@ -44,6 +54,7 @@ def menu():
     option4 = "4-Install requests"
     option5 = "5-Append word on top"
     option6 = "6-Run wordlist on target URL to find directories"
+    option7 = "7-Same as 6 but shows only 200 codes"
     show_menu= True
     menu_attempts = 0
 
@@ -54,6 +65,7 @@ def menu():
         print(option4)
         print(option5)
         print(option6)
+        print(option7)
 
         show_menu = input("Select an option: ")
 
@@ -76,6 +88,10 @@ def menu():
         elif show_menu == "6":
             print("Option 6 has been selected")
             dir_finder()
+            time.sleep(1)
+        elif show_menu == "7":
+            print("Option 7 has been selected")
+            dir_finder2()
             time.sleep(1)
         elif show_menu == "3":
             print("Option 3 has been selected")
