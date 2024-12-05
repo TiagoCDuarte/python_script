@@ -1,5 +1,17 @@
 #!/bin/python
 
+#to-do
+#add README
+#add coments explaining the code
+#add parameters to the function of option 6 to include the 7 inside it and calling with flags
+#add option to filter more status codes and distinguish them by colour
+#add option to set the speed of the requests (ex 10requests/s, 5 requests/s, 1 request/s)
+#add the the option to the same but for sub domains.
+#add another option to run for subdomains and dirs automatically
+#add the option to export results to a file to be saved to later
+#add option to grab the source code and filtrate links, images (to catch the paths), anything that is commented that can be usefull, (...) and also store it on a file
+
+#######
 import time
 import os
 import requests
