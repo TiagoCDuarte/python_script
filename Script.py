@@ -16,6 +16,8 @@ import time
 import os
 import requests
 
+Filename=""
+
 #Functions
 def wordlist():
     with open("names.txt", 'r') as file:
